@@ -4,8 +4,7 @@
 
  * [Git Repo](https://github.com/robbyrussell/oh-my-zsh)
 
-### Scripts
+### ln -s
 
-* **update.sh**: copy ~/.zshrc to ./zshrc
-* **install.sh** copy ./zhsrc to ~/.zshrc
+ln -s ~/Configs/oh-my-zsh-config/.zshrc ~/.zshrc
 
