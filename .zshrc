@@ -136,23 +136,23 @@ alias fuck="git status"
 
 ######## Cocos Environment Begin ########
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/Jacky/Cocos2d-x/v3/tools/cocos2d-console/bin
-#export COCOS_CONSOLE_ROOT=/Users/Jacky/Cocos2d-x/cocos2d-x-3.10/tools/cocos2d-console/bin
-#export COCOS_CONSOLE_ROOT=/Users/Jacky/Cocos2d-x/cocos2d-x-3.3/tools/cocos2d-console/bin
+#export COCOS_CONSOLE_ROOT=/Users/Jacky/Cocos2d-x/v3/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=/Users/Jacky/Cocos2d-x/cocos2d-x-3.16/tools/cocos2d-console/bin
 #export COCOS_CONSOLE_ROOT=/Users/Jacky/Cocos2d-js/cocos2d-js-v3.3/tools/cocos2d-console/bin
-#export COCOS_CONSOLE_ROOT=/Applications/Cocos/frameworks/cocos2d-x-3.4/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-#export COCOS_TEMPLATES_ROOT=/Users/Jacky/Cocos2d-x/cocos2d-x-3.10/templates
-#export COCOS_TEMPLATES_ROOT=/Users/Jacky/Cocos2d-x/cocos2d-x-3.3/templates
-export COCOS_TEMPLATES_ROOT=/Users/Jacky/Cocos2d-x/v3/templates
+export COCOS_TEMPLATES_ROOT=/Users/Jacky/Cocos2d-x/cocos2d-x-3.16/templates
+#export COCOS_TEMPLATES_ROOT=/Users/Jacky/Cocos2d-x/v3/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # Add environment variable NDK_ROOT for cocos2d-x
 #export NDK_ROOT=/Users/Jacky/AndroidDev/android-ndk-r9d
 export NDK_ROOT=/Users/Jacky/AndroidDev/android-ndk-r10c
 export PATH=$NDK_ROOT:$PATH
+#export ANDROID_NDK_ROOT=/Users/Jacky/AndroidDev/android-ndk-r9d
+export ANDROID_NDK_ROOT=/Users/Jacky/AndroidDev/android-ndk-r10c
+export PATH=$ANDROID_NDK_ROOT:$PATH
 
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
 export ANDROID_SDK_ROOT=/Users/Jacky/AndroidDev/sdk
@@ -160,15 +160,15 @@ export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 # Add environment variable ANT_ROOT for cocos2d-x
-export ANT_ROOT=/usr/local/Cellar/ant/1.9.5/libexec/bin
+export ANT_ROOT=/usr/local/bin
 export PATH=$ANT_ROOT:$PATH
 ######## Cocos Environment End ########
 
+# add by quick-cocos2d-x setup, DATE: 2016-05-20 TIME: 10:28:42
+export QUICK_V3_ROOT=`cat ~/.QUICK_V3_ROOT`
+
 ######## Path Export Begin ########
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/
-
-# NodeJS
-export NODE_PATH='/usr/local/lib/node_modules'
 
 # Ruby
 export PATH=/Users/jacky/.rbenv/versions/2.2.3/bin:$PATH
@@ -179,3 +179,19 @@ export PATH=/Users/jacky/AndroidDev/apktool:$PATH
 # Dex2jar
 export PATH=/Users/jacky/AndroidDev/dex2jar:$PATH
 ######## Path Export End ########
+
+
+######## Project Settings Begin ########
+
+#ixianxia
+alias sshhdtest="ssh -i /Users/Jacky/Game/hdhd_hyqxz -l root 118.89.144.186 -p 60022"
+######## Project Settings End ########
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add environment variable COCOS_X_ROOT for cocos2d-x
+export COCOS_X_ROOT="/Users/Jacky/Cocos2d-x"
+export PATH=$COCOS_X_ROOT:$PATH
