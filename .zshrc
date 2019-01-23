@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE=“false”
@@ -36,7 +36,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -45,7 +45,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx)
+plugins=(git osx zsh-syntax-highlighting git-open)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,46 +116,37 @@ alias pwd='pwd | pbcopy; pbpaste'
 
 
 ######## Quick Entry Begin ########
-# For zshrc editor
+# For zshrc
 alias sourcezhrc="source ~/.zshrc"
-
-# For Cocos
-alias cdv3='cd /Users/Jacky/Cocos2d-x/v3'
-alias cd3rd='/Users/Jacky/Cocos2d-x/3rd-party-libs-bin'
-alias gen3rd='cd3rd && cd cocos2d-x-3rd-party-libs-bin && git pull origin v3 --tags && cd .. && ./generate_cocos2dx_deps.sh'
 
 # Sublime Text3
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+
+# For show android package name
+function showpackage {
+	aapt dump badging $1 | grep package:\ name
+}
 ######## Quick Entry End ########
 
 
 ######## Git Begin ########
 alias fuck="git status"
+alias f="git status"
+alias fuc="git status"
+alias gb="git pull origin master"
+alias gc="git commit -m 'update'"
 ######## Git End ########
 
 
 ######## Cocos Environment Begin ########
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-#export COCOS_CONSOLE_ROOT=/Users/Jacky/Cocos2d-x/v3/tools/cocos2d-console/bin
-export COCOS_CONSOLE_ROOT=/Users/Jacky/Cocos2d-x/cocos2d-x-3.16/tools/cocos2d-console/bin
-#export COCOS_CONSOLE_ROOT=/Users/Jacky/Cocos2d-js/cocos2d-js-v3.3/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/Jacky/Cocos2d-x/cocos2d-x-3.16/templates
-#export COCOS_TEMPLATES_ROOT=/Users/Jacky/Cocos2d-x/v3/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
-
 # Add environment variable NDK_ROOT for cocos2d-x
-#export NDK_ROOT=/Users/Jacky/AndroidDev/android-ndk-r9d
-export NDK_ROOT=/Users/Jacky/AndroidDev/android-ndk-r10c
+export NDK_ROOT=/Users/jacky/AndroidDev/android-ndk-r10c
 export PATH=$NDK_ROOT:$PATH
-#export ANDROID_NDK_ROOT=/Users/Jacky/AndroidDev/android-ndk-r9d
-export ANDROID_NDK_ROOT=/Users/Jacky/AndroidDev/android-ndk-r10c
+export ANDROID_NDK_ROOT=/Users/jacky/AndroidDev/android-ndk-r10c
 export PATH=$ANDROID_NDK_ROOT:$PATH
 
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT=/Users/Jacky/AndroidDev/sdk
+export ANDROID_SDK_ROOT=/Users/jacky/AndroidDev/sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
@@ -164,34 +155,30 @@ export ANT_ROOT=/usr/local/bin
 export PATH=$ANT_ROOT:$PATH
 ######## Cocos Environment End ########
 
-# add by quick-cocos2d-x setup, DATE: 2016-05-20 TIME: 10:28:42
-export QUICK_V3_ROOT=`cat ~/.QUICK_V3_ROOT`
 
-######## Path Export Begin ########
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/
-
-# Ruby
-export PATH=/Users/jacky/.rbenv/versions/2.2.3/bin:$PATH
-
-# ApkTool
-export PATH=/Users/jacky/AndroidDev/apktool:$PATH
-
-# Dex2jar
-export PATH=/Users/jacky/AndroidDev/dex2jar:$PATH
-######## Path Export End ########
+####### Java Begin #######
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/
+####### Java End #######
 
 
-######## Project Settings Begin ########
-
-#ixianxia
-alias sshhdtest="ssh -i /Users/Jacky/Game/hdhd_hyqxz -l root 118.89.144.186 -p 60022"
-######## Project Settings End ########
-
-
+######## NVM Begin ########
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+######## NVM End ########
 
-# Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT="/Users/Jacky/Cocos2d-x"
-export PATH=$COCOS_X_ROOT:$PATH
+
+####### Mysql Begin #######
+export MYSQL_BIN_ROOT=/usr/local/mysql/bin
+export PATH=$MYSQL_BIN_ROOT:$PATH
+####### Mysql End #######
+
+
+####### Android SDK BUILD-TOOLS Begin #######
+export ANDROID_BUILD_TOOLS=/Users/jacky/AndroidDev/sdk/build-tools/27.0.3
+export PATH=$ANDROID_BUILD_TOOLS:$PATH
+####### Android SDK BUILD-TOOLS End #######
+# Add environment variable SDKBOX_HOME for sdkbox installer
+export SDKBOX_HOME=/Users/jacky/.sdkbox
+export PATH=${SDKBOX_HOME}/bin:$PATH
+source ~/.oh-my-zsh/plugins/incr/incr*.zsh
