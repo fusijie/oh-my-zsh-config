@@ -45,7 +45,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx zsh-syntax-highlighting git-open)
+plugins=(git osx zsh-syntax-highlighting zsh-autosuggestions git-open)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,6 +122,9 @@ alias sourcezhrc="source ~/.zshrc"
 # Sublime Text3
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 
+# Visual Studio Code
+alias vsc="'/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'"
+
 # For show android package name
 function showpackage {
 	aapt dump badging $1 | grep package:\ name
@@ -181,4 +184,3 @@ export PATH=$ANDROID_BUILD_TOOLS:$PATH
 # Add environment variable SDKBOX_HOME for sdkbox installer
 export SDKBOX_HOME=/Users/jacky/.sdkbox
 export PATH=${SDKBOX_HOME}/bin:$PATH
-source ~/.oh-my-zsh/plugins/incr/incr*.zsh
