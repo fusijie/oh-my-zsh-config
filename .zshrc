@@ -123,7 +123,7 @@ alias sourcezhrc="source ~/.zshrc"
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 
 # Visual Studio Code
-alias vsc="'/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'"
+alias vscode="'/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code'"
 
 # For show android package name
 function showpackage {
@@ -184,3 +184,18 @@ export PATH=$ANDROID_BUILD_TOOLS:$PATH
 # Add environment variable SDKBOX_HOME for sdkbox installer
 export SDKBOX_HOME=/Users/jacky/.sdkbox
 export PATH=${SDKBOX_HOME}/bin:$PATH
+
+
+####### Electron mirror Begin #######
+export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
+####### Electron mirror End #######
+
+
+####### React Native Begin #######
+export ANDROID_HOME=$HOME/AndroidDev/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/emulator
+export ANDROID_NDK_HOME=$HOME/AndroidDev/android-ndk-r10c
+####### React Native End #######
